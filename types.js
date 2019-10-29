@@ -1,5 +1,7 @@
 "use strict";
-exports.__esModule = true;
+// exports.__esModule = true;
 var myString;
+var myNumber;
 myString = "Hello world!!!";
-console.log(myString);
+myNumber = 22;
+console.log(myNumber);
