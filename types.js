@@ -1,1 +1,3 @@
-console.log("hello from TS");
+var myString;
+myString = "Hello world!!!";
+console.log(myString);
