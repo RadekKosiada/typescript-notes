@@ -1,3 +1,5 @@
+export{}; 
+
 let myString: string;
 
 myString = "Hello world!!!";
