@@ -2,7 +2,7 @@
 var myString;
 var myNumber;
 var myBoolean;
-myString = "Hello world!!!";
+myString = "Hello" + "world!!!";
 myNumber = 0x7fb8;
 myBoolean = true;
 console.log(myBoolean);
