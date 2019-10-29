@@ -2,7 +2,7 @@
 var myString;
 var myNumber;
 var myBoolean;
-myString = "Hello" + "world!!!";
+myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
 myBoolean = true;
-console.log(myBoolean);
+console.log(myString);
