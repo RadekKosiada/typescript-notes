@@ -5,7 +5,7 @@ let myNumber: number;
 let myBoolean: boolean;
 
 myString = "Hello world!!!";
-myNumber = -22 + 3-45;
+myNumber = 0x7fb8;
 myBoolean = true;
 
 console.log(myBoolean);
