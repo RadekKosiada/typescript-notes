@@ -3,6 +3,6 @@ var myString;
 var myNumber;
 var myBoolean;
 myString = "Hello world!!!";
-myNumber = 22;
+myNumber = -22 + 3 - 45;
 myBoolean = true;
 console.log(myBoolean);
