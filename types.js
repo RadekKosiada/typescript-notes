@@ -5,6 +5,11 @@ var myBoolean;
 var myVar;
 //array type;
 //array of strings
+/*
+let strArr: string[];
+let numArr: number[];
+let boolArr: boolean[]; */
+// array type (different syntax);
 var strArr;
 var numArr;
 var boolArr;

@@ -7,9 +7,16 @@ let myVar: any;
 
 //array type;
 //array of strings
+/* 
 let strArr: string[];
 let numArr: number[];
-let boolArr: boolean[];
+let boolArr: boolean[]; */
+
+// array type (different syntax);
+let strArr: Array<string>;
+let numArr: Array<number>;
+let boolArr: Array<boolean>; 
+
 
 myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
