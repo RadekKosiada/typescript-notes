@@ -5,8 +5,18 @@ let myNumber: number;
 let myBoolean: boolean;
 let myVar: any;
 
+//array type;
+//array of strings
+let strArr: string[];
+let numArr: number[];
+let boolArr: boolean[];
+
 myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
 myBoolean = true;
 myVar = "Hello";
-console.log(myString);
+strArr = ["hello", "world"];
+numArr = [1, 2, 3];
+boolArr = [true, false, true];
+
+console.log(numArr);
