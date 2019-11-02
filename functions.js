@@ -20,3 +20,6 @@ function getName(firstName, lastName) {
     return firstName + ' ' + lastName;
 }
 console.log(getName('John'));
+function myFunctionVoid() {
+}
+myFunctionVoid();
