@@ -8,4 +8,4 @@ var User = /** @class */ (function () {
     return User;
 }());
 var john = new User('John Doe', 'joe@mail.com', 34);
-// console.log(john.age); //now will log error as age is a private property
+console.log(john.age); //now will log error as age is a private property

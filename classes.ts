@@ -1,7 +1,7 @@
 class User {
   private name: string;
   private email: string;
-  private age: number
+  public age: number
 
   constructor(name: string, email: string, age: number) {
     this.name = name;
@@ -14,4 +14,4 @@ class User {
 
 let john = new User('John Doe', 'joe@mail.com', 34);
 
-// console.log(john.age); //now will log error as age is a private property
+console.log(john.age); //now will log error as age is a private property
