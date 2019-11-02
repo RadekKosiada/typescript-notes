@@ -13,3 +13,5 @@ class User {
 }
 
 let john = new User('John Doe', 'joe@mail.com', 34);
+
+console.log(john.age);
