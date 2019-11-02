@@ -19,6 +19,10 @@ let boolArr: Array<boolean>;
 
 let strNumTuple: [string, number, number, number];
 
+//other syntax to define type & initialize variable;
+let myVoid: void = undefined;
+let myOtherVoid: void = null;
+
 myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
 myBoolean = true;
@@ -31,4 +35,4 @@ boolArr = [true, false, true];
 
 strNumTuple = ["Hello", 4, 5, 85];
 
-console.log(strNumTuple);
+console.log(myOtherVoid);
