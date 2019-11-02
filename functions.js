@@ -21,5 +21,6 @@ function getName(firstName, lastName) {
 }
 console.log(getName('John'));
 function myFunctionVoid() {
+    return;
 }
 myFunctionVoid();
