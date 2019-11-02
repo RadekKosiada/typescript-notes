@@ -17,6 +17,8 @@ var strNumTuple;
 //other syntax to define type & initialize variable;
 var myVoid = undefined;
 var myOtherVoid = null;
+var myNull = null;
+var myUndefined = undefined;
 myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
 myBoolean = true;
@@ -25,4 +27,4 @@ strArr = ["hello", "world"];
 numArr = [1, 2, 3];
 boolArr = [true, false, true];
 strNumTuple = ["Hello", 4, 5, 85];
-console.log(myOtherVoid);
+console.log(myUndefined);

@@ -23,6 +23,9 @@ let strNumTuple: [string, number, number, number];
 let myVoid: void = undefined;
 let myOtherVoid: void = null;
 
+let myNull: null = null;
+let myUndefined: undefined = undefined;
+
 myString = "Hello".slice(0, 3); //gets 'Hel'
 myNumber = 0x7fb8;
 myBoolean = true;
@@ -35,4 +38,4 @@ boolArr = [true, false, true];
 
 strNumTuple = ["Hello", 4, 5, 85];
 
-console.log(myOtherVoid);
+console.log(myUndefined);
