@@ -27,4 +27,4 @@ strArr = ["hello", "world"];
 numArr = [1, 2, 3];
 boolArr = [true, false, true];
 strNumTuple = ["Hello", 4, 5, 85];
-console.log(myUndefined);
+
