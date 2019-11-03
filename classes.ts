@@ -1,5 +1,5 @@
 class User {
-  private name: string;
+  name: string;
   private email: string;
   protected age: number
 
@@ -10,8 +10,14 @@ class User {
 
     console.log('User Created: ' + this.name);
   }
+
+  register() {
+    console.log(this.name + ' in now registered');
+  }
 }
 
 let john = new User('John Doe', 'joe@mail.com', 34);
 
-console.log(john.age); //now will log error as age is a private property
+// console.log(john.age); //now will log error as age is a private property
+
+john.register();
