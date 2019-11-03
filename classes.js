@@ -20,9 +20,11 @@ var User = /** @class */ (function () {
     }
     User.prototype.register = function () {
         console.log(this.name + ' in now registered');
+        return this.name + ' in now registered';
     };
     User.prototype.payInvoice = function () {
         console.log(this.name + ' payed invoice.');
+        return this.name + ' payed invoice.';
     };
     return User;
 }());
@@ -37,7 +39,7 @@ var Member = /** @class */ (function (_super) {
         return _this;
     }
     Member.prototype.payInvoice = function () {
-        _super.prototype.payInvoice.call(this);
+        return _super.prototype.payInvoice.call(this);
     };
     return Member;
 }(User));

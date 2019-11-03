@@ -1,7 +1,15 @@
-class User {
+interface UserInterface {
   name: string;
-  private email: string;
-  protected age: number
+  email: string;
+  age: number;
+  register: () => string;
+  payInvoice: () => string;
+}
+
+class User implements UserInterface {
+  name: string;
+  email: string;
+  age: number;
 
   constructor(name: string, email: string, age: number) {
     this.name = name;
@@ -13,9 +21,11 @@ class User {
 
   register() {
     console.log(this.name + ' in now registered');
+    return this.name + ' in now registered';
   }
   payInvoice() {
-    console.log(this.name + ' payed invoice.')
+    console.log(this.name + ' payed invoice.');
+    return this.name + ' payed invoice.';
   }
 }
 
@@ -33,7 +43,7 @@ class Member extends User{
   }
 
   payInvoice() {
-    super.payInvoice();
+    return super.payInvoice();
   }
 }
 
