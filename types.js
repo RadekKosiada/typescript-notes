@@ -7,14 +7,14 @@ var myBoolean;
 var myVar; //anything
 //array type;
 //array of strings
-/*
-let strArr: string[];
-let numArr: number[];
-let boolArr: boolean[]; */
+var strArr2;
+var numArr2;
+var boolArr2;
 // array type (different syntax);
 var strArr;
 var numArr;
 var boolArr;
+//Tuple - array with fixed number of elements;
 var strNumTuple;
 //other syntax to define type & initialize variable;
 // void - no type returned;
@@ -22,13 +22,12 @@ var myVoid = undefined;
 var myOtherVoid = null;
 var myNull = null;
 var myUndefined = undefined;
-myString = "Hello".slice(0, 3); //gets 'Hel'
+myString = "Hello".slice(0, 3); //gets 'Hel' so also a string;
 myNumber = 0x7fb8;
 myBoolean = true;
 myVar = "Hello";
 strArr = ["hello", "world"];
 numArr = [1, 2, 3];
 boolArr = [true, false, true];
-//Tuple - array with fixed number of elements;
 strNumTuple = ["Hello", 4, 5, 85];
 console.log(myUndefined);

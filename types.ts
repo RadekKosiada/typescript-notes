@@ -10,16 +10,17 @@ let myVar: any; //anything
 
 //array type;
 //array of strings
-/* 
-let strArr: string[];
-let numArr: number[];
-let boolArr: boolean[]; */
+
+let strArr2: string[];
+let numArr2: number[];
+let boolArr2: boolean[]; 
 
 // array type (different syntax);
 let strArr: Array<string>;
 let numArr: Array<number>;
 let boolArr: Array<boolean>; 
 
+//Tuple - array with fixed number of elements;
 let strNumTuple: [string, number, number, number];
 
 //other syntax to define type & initialize variable;
@@ -30,7 +31,7 @@ let myOtherVoid: void = null;
 let myNull: null = null;
 let myUndefined: undefined = undefined;
 
-myString = "Hello".slice(0, 3); //gets 'Hel'
+myString = "Hello".slice(0, 3); //gets 'Hel' so also a string;
 myNumber = 0x7fb8;
 myBoolean = true;
 
@@ -40,7 +41,6 @@ strArr = ["hello", "world"];
 numArr = [1, 2, 3];
 boolArr = [true, false, true];
 
-//Tuple - array with fixed number of elements;
 strNumTuple = ["Hello", 4, 5, 85];
 
 console.log(myUndefined);
