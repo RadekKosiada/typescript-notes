@@ -49,3 +49,51 @@ class Member extends User{
 
 let mike: User = new Member(1, 'Mike Smith', 'mike@gmail.com', 34);
 mike.payInvoice();
+
+
+
+///Another example!
+
+interface VehicleInterface {
+  name: string;
+  speed: number;
+  working(): void;
+}
+
+class Vehicle implements VehicleInterface {
+  public name: string;
+  public speed: number;
+
+  //special method that runs when extend class with a new object;
+  constructor(name: string, speed: number) {
+    //this refers to class!
+    this.name = name;
+    this.speed = speed;
+    
+    console.log("Vehicle: ", this.name)
+  }
+
+   public working() {
+    console.log(this.name + " is working.")
+  }
+}
+
+class Car extends Vehicle {
+  wheels: number;
+
+  constructor(wheels: number, name: string, speed: number ) {
+    //super has only two arguments from 'parent' class
+    super(name, speed);
+    this.wheels = wheels;
+  } 
+
+  needsFatTires() {
+    console.log(this.name + " needs fat tires")
+  } 
+}
+
+let audi = new Car(4, "Audi", 34);
+console.log(audi.name);
+
+let bike = new Vehicle("Rower", 3)
+bike.working();

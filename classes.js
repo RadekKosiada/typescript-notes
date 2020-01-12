@@ -45,3 +45,34 @@ var Member = /** @class */ (function (_super) {
 }(User));
 var mike = new Member(1, 'Mike Smith', 'mike@gmail.com', 34);
 mike.payInvoice();
+var Vehicle = /** @class */ (function () {
+    //special method that runs when extend class with a new object;
+    function Vehicle(name, speed) {
+        //this refers to class!
+        this.name = name;
+        this.speed = speed;
+        console.log("Vehicle: ", this.name);
+    }
+    Vehicle.prototype.working = function () {
+        console.log(this.name + " is working.");
+    };
+    return Vehicle;
+}());
+var Car = /** @class */ (function (_super) {
+    __extends(Car, _super);
+    function Car(wheels, name, speed) {
+        var _this = 
+        //super has only two arguments from 'parent' class
+        _super.call(this, name, speed) || this;
+        _this.wheels = wheels;
+        return _this;
+    }
+    Car.prototype.needsFatTires = function () {
+        console.log(this.name + " needs fat tires");
+    };
+    return Car;
+}(Vehicle));
+var audi = new Car(4, "Audi", 34);
+console.log(audi.name);
+var bike = new Vehicle("Rower", 3);
+bike.working();
