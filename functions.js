@@ -11,7 +11,7 @@ var mySum = function (num1, num2) {
     }
     return num1 + num2;
 };
-// console.log(mySum('3', 5))
+console.log(mySum('3', 5)); //returns 8;
 //why the optional argument is beneficial?
 function getName(firstName, lastName) {
     if (!lastName) {

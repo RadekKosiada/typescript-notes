@@ -14,7 +14,7 @@ let mySum = function (num1: any, num2: any): number {
   return num1 + num2;
 }
 
-// console.log(mySum('3', 5))
+console.log(mySum('3', 5)) //returns 8;
 
 //why the optional argument is beneficial?
 function getName(firstName: string, lastName?: string): string {
