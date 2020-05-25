@@ -17,3 +17,5 @@ Unlike JS that uses 'dynamic types';
     - strict;
 
 + tuple - array with fixed number of elements;
+
++ enum - enumerated list, custom type, often uppercase, but lower case is also correct;
