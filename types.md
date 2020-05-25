@@ -19,3 +19,11 @@ Unlike JS that uses 'dynamic types';
 + tuple - array with fixed number of elements;
 
 + enum - enumerated list, custom type, often uppercase, but lower case is also correct;
+
++ any;
+
++ void - no type returned;
+
++ null; 
+
++ generics;
