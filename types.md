@@ -34,6 +34,17 @@ Unlike JS that uses 'dynamic types';
 
 + Function - type to declare on functions, to make sure they are not defined; 
 
++ unknown - cannot be assigned to string;
+https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type
+Anything is assignable to unknown, but unknown isn’t assignable to anything but itself and any without a type assertion or a control flow based narrowing. 
+
++ any - to define type of variables that we do not know when we are writing an application;
+
++ never; 
+    - for a function that always crashes script or a part of it and never returns anything, even not an 'undefined';
+    - can be also void; but 'never' is better;
+
+
 + null; 
 
 + generics;
