@@ -22,8 +22,16 @@ Unlike JS that uses 'dynamic types';
 
 + any;
 
++ union - defined with '|';
+
++ literal types - variables, where not only type, but also the very value is defined!;
+
++ custom type - can have any name, but no key words used in JS i.e. Date...
+
+
 + void - no type returned;
 
 + null; 
 
 + generics;
+
