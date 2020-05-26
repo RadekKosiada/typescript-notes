@@ -28,8 +28,11 @@ Unlike JS that uses 'dynamic types';
 
 + custom type - can have any name, but no key words used in JS i.e. Date...
 
++ void - for functions that have no return statement; for example if we only log things in the console;
 
-+ void - no type returned;
++ undefined - is a value itself; so doesn't equal void;
+
++ Function - type to declare on functions, to make sure they are not defined; 
 
 + null; 
 
