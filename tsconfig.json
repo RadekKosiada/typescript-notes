@@ -70,12 +70,12 @@
     "types/",
     "**/*.dev.ts",
     "node_modules" //would be the default
-  ],
-  "include": [ /* if we add it, we need to add all files we want to include 
-    we can use whole paths */
-    "xyz.ts"
-  ],
-  "files": [ /* similar as 'include' but only for file names */
-    "abc.ts"
   ]
+  // "include": [ /* if we add it, we need to add all files we want to include 
+  //   we can use whole paths */
+  //   "xyz.ts"
+  // ],
+  // "files": [ /* similar as 'include' but only for file names */
+  //   "abc.ts"
+  // ]
 }
