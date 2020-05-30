@@ -1,17 +1,19 @@
 /* Declaring class */
 
 class Department {
-    public name: string;
+    // private id: string;
+    // private name: string;
     /* Adding 'private' modifier */
     private employees: string[] = [];
     //constructor method
-    constructor(n: string) {
-        this.name = n;
+    constructor(private id: string, public name: string) {
+        // this.id = id;
+        // this.name = n;
     }
     /* adding method */
     /* using 'this' keyword */
     describe(this: Department) {
-        console.log('Department: ' + this.name)
+        console.log('Department: ' + this.id + ', ' + this.name)
     }
 
     addEmployee(employee: string) {
@@ -24,7 +26,7 @@ class Department {
     }
 }
 
-const accounting = new Department('Accounting');
+const accounting = new Department('d1','Accounting');
 
 
 accounting.addEmployee('Max');
@@ -36,7 +38,7 @@ accounting.employees[2] = 'Anna';
 */
 
 /* using public = which is default */
-accounting.name = 'new Name'
+// accounting.name = 'new Name'
 
 accounting.describe();
 
