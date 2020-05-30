@@ -95,3 +95,15 @@ console.log("addedNumbers", addedNumbers);
 var hobby1 = hobbies[0], hobby2 = hobbies[1], remainingHobbies = hobbies.slice(2);
 console.log(hobby1); // 'Sports';
 console.log(remainingHobbies); // []; empty array as no more hobbies
+/* Destructuring object */
+var student = {
+    firstName: 'Joanna',
+    subject: 'History of Art'
+};
+/* the names of variables within the curly brackets
+ have to be the same as the object properties */
+var firstName = student.firstName, subject = student.subject;
+console.log(firstName); // 'Joanna';
+/* if we want to overwrite the properties from the object */
+var studentName = student.firstName, field = student.subject;
+console.log(studentName); // 'Joanna';

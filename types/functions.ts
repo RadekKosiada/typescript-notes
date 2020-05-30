@@ -93,3 +93,20 @@ console.log("addedNumbers", addedNumbers);
 const [hobby1, hobby2, ...remainingHobbies] = hobbies;
 console.log(hobby1); // 'Sports';
 console.log(remainingHobbies); // []; empty array as no more hobbies
+
+/* Destructuring object */
+
+const student = {
+    firstName: 'Joanna',
+    subject: 'History of Art'
+};
+
+/* the names of variables within the curly brackets
+ have to be the same as the object properties */
+
+const { firstName, subject} = student;
+console.log(firstName) // 'Joanna';
+ 
+/* if we want to overwrite the properties from the object */
+const {firstName: studentName, subject: field } = student;
+console.log(studentName) // 'Joanna';
