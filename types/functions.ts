@@ -42,3 +42,14 @@ const addNums = (a: number, b: number = 1) => a + b;
 
 const resultFromAddNums = addNums(2);
 console.log('resultFromAddNums', resultFromAddNums);
+
+/* Spread operator on array */
+const hobbies = ['Sports', 'Cookies'];
+const activeHobbies = ['Hiking', ...hobbies];
+
+console.log('activeHobbies', activeHobbies); //  ["Hiking", "Sports", "Cookies"]0: "Hiking"1: "Sports"2: "Cookies"3: "Sports"4: "Cookies"length: 5__proto__: Array(0)
+
+
+const testArray = activeHobbies.push(...hobbies);
+console.log('testArray', testArray) // 5
+
