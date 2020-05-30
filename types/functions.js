@@ -89,3 +89,9 @@ var add3 = function () {
 };
 var addedNumbers = add2(5, 10, 2, 3.7);
 console.log("addedNumbers", addedNumbers);
+/* Destructuring array
+( it's not changing the original array )
+*/
+var hobby1 = hobbies[0], hobby2 = hobbies[1], remainingHobbies = hobbies.slice(2);
+console.log(hobby1); // 'Sports';
+console.log(remainingHobbies); // []; empty array as no more hobbies

@@ -84,3 +84,12 @@ const add3 = (...numbers: [number, number, number]) => {
 
 const addedNumbers = add2(5, 10, 2, 3.7);
 console.log("addedNumbers", addedNumbers);
+
+
+/* Destructuring array 
+( it's not changing the original array )
+*/
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobby1); // 'Sports';
+console.log(remainingHobbies); // []; empty array as no more hobbies
