@@ -1,3 +1,4 @@
+"use strict";
 function add(n1, n2) {
     return n1 + n2;
 }
@@ -22,3 +23,13 @@ function addAndHandle(n1, n2, cb) {
 addAndHandle(10, 20, function (result) {
     console.log(result);
 });
+/* Default value for function's parameter
+    It has to be the LAST argument, because they are not skipped;
+*/
+var addNums = function (a, b) {
+    if (b === void 0) { b = 1; }
+    return a + b;
+};
+/* allows us to call this function with only one parameter */
+var resultFromAddNums = addNums(2);
+console.log('resultFromAddNums', resultFromAddNums);

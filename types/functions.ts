@@ -31,3 +31,14 @@ function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
 addAndHandle(10,20, (result) => {
     console.log(result)
 })
+
+/* Default value for function's parameter
+    It has to be the LAST argument, because they are not skipped;
+*/
+
+const addNums = (a: number, b: number = 1) => a + b;
+
+/* allows us to call this function with only one parameter */
+
+const resultFromAddNums = addNums(2);
+console.log('resultFromAddNums', resultFromAddNums);
