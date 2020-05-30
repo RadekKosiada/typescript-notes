@@ -32,7 +32,9 @@ Unlike JS that uses 'dynamic types';
 
 + undefined - is a value itself; so doesn't equal void;
 
-+ Function - type to declare on functions, to make sure they are not defined; 
++ Function 
+    - type to declare on functions, to make sure they are not defined; 
+    - '...' spread operator when don't know how many arguments do we pass;
 
 + unknown - cannot be assigned to string;
 https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type
@@ -48,4 +50,5 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 + null; 
 
 + generics;
+
 

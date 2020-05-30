@@ -53,3 +53,34 @@ console.log('activeHobbies', activeHobbies); //  ["Hiking", "Sports", "Cookies"
 const testArray = activeHobbies.push(...hobbies);
 console.log('testArray', testArray) // 5
 
+/* Spread operator on an object */
+
+const person = {
+    name: 'Max',
+    age: 30
+}
+
+//perfect copy of person object
+const copiedPerson = {... person};
+
+// if we do const copiedPerson = person we would have a copy of the pointer to object;
+console.log(copiedPerson)
+
+
+/* 
+using spread operator in a function
+if we don't know the number of the arguments 
+*/
+const add2 = (...numbers: number[]) => {
+    return numbers.reduce((currentResult, currentValue) => {
+        return currentResult + currentValue
+    }, 0) 
+}
+
+/* using spread operator & tuples (we know how many arguments) */
+const add3 = (...numbers: [number, number, number]) => {
+    //
+}
+
+const addedNumbers = add2(5, 10, 2, 3.7);
+console.log("addedNumbers", addedNumbers);
