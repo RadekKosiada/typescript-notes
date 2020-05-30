@@ -1,7 +1,7 @@
 /* Declaring class */
 
 class Department {
-    name: string;
+    public name: string;
     /* Adding 'private' modifier */
     private employees: string[] = [];
     //constructor method
@@ -34,6 +34,9 @@ accounting.addEmployee('Radek');
 using 'private' modifier will make this impossible so it's harder to mess w/ employees array
 accounting.employees[2] = 'Anna';
 */
+
+/* using public = which is default */
+accounting.name = 'new Name'
 
 accounting.describe();
 

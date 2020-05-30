@@ -28,6 +28,8 @@ accounting.addEmployee('Radek');
 using 'private' modifier will make this impossible so it's harder to mess w/ employees array
 accounting.employees[2] = 'Anna';
 */
+/* using public = which is default */
+accounting.name = 'new Name';
 accounting.describe();
 accounting.printEmployeeeInformation();
 console.log(accounting);
