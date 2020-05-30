@@ -6,7 +6,7 @@ class Department {
     /* Adding 'private' modifier */
     private employees: string[] = [];
     //constructor method
-    constructor(private id: string, public name: string) {
+    constructor(private readonly id: string, public name: string) {
         // this.id = id;
         // this.name = n;
     }
