@@ -86,10 +86,19 @@ var IADepartment = /** @class */ (function (_super) {
     IADepartment.prototype.getReports = function () {
         console.log(this.reports);
     };
+    /* overwriting properties (methods) from base class */
+    IADepartment.prototype.addEmployee = function (name) {
+        if (name === 'Max' || name === 'Radek') {
+            return;
+        }
+        this.employees.push(name);
+    };
     return IADepartment;
 }(Department));
 // creating a new IADepartment
 var iATeam = new IADepartment('ia01', ['Coyo21']);
 // adding reports 
 iATeam.addReport('SharePoint');
+iATeam.addEmployee('Pia');
+iATeam.printEmployeeeInformation();
 console.log('iATeam', iATeam);

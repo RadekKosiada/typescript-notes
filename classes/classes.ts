@@ -4,7 +4,7 @@ class Department {
     // private id: string;
     // private name: string;
     /* Adding 'private' modifier */
-    private employees: string[] = [];
+    protected employees: string[] = [];
     //constructor method
     constructor(private readonly id: string, public name: string) {
         // this.id = id;
@@ -81,11 +81,21 @@ class IADepartment extends Department {
         console.log(this.reports);
     }
 
+    /* overwriting properties (methods) from base class */
+    addEmployee(name: string) {
+        if (name=== 'Max' || name === 'Radek') {
+            return;
+        }
+        this.employees.push(name);
+    }
 }
 // creating a new IADepartment
 const iATeam = new IADepartment('ia01', ['Coyo21']);
 // adding reports 
 iATeam.addReport('SharePoint');
+
+iATeam.addEmployee('Pia');
+iATeam.printEmployeeeInformation();
 
 console.log('iATeam', iATeam);
 

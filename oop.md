@@ -11,3 +11,4 @@
 ###### Modifiers
 * 'public' default one;
 * 'private' make a property accessible only within the class;
+* 'protected' cannot be changed from outside of the class, but can be 'rented'/accessed from its child class;
