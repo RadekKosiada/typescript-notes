@@ -8,6 +8,9 @@
 * define how objects look like, which properties an methods the have;
 * classes make creation of multiple, similar objects much easier;
 
+##### Abstract classes
+* Abstract classes are base classes from which other classes may be derived. They may not be instantiated directly.
+
 ###### Modifiers
 * 'public' default one;
 * 'private' make a property accessible only within the class;

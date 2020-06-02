@@ -30,11 +30,6 @@ var Department = /** @class */ (function () {
     Department.createEmployee = function (name) {
         return { name: name };
     };
-    /* adding method */
-    /* using 'this' keyword */
-    Department.prototype.describe = function () {
-        console.log('Department: ' + this.id + ', ' + this.name);
-    };
     Department.prototype.addEmployee = function (employee) {
         this.employees.push(employee);
     };
@@ -47,18 +42,18 @@ var Department = /** @class */ (function () {
 }());
 var employee1 = Department.createEmployee('Radek');
 console.log('employee1', employee1, Department.fiscalYear);
-var accounting = new Department('d1', 'Accounting');
-accounting.addEmployee('Max');
-accounting.addEmployee('Radek');
+// const accounting = new Department('d1', 'Accounting');
+// accounting.addEmployee('Max');
+// accounting.addEmployee('Radek');
 /*
 using 'private' modifier will make this impossible so it's harder to mess w/ employees array
 accounting.employees[2] = 'Anna';
 */
 /* using public = which is default */
 // accounting.name = 'new Name'
-accounting.describe();
-accounting.printEmployeeeInformation();
-console.log(accounting);
+// accounting.describe();
+// accounting.printEmployeeeInformation();
+// console.log(accounting);
 // const accountingCopy = { name: 's', describe: accounting.describe };
 // accountingCopy.describe();
 /* Inheritance */
@@ -76,6 +71,9 @@ var ITDepartment = /** @class */ (function (_super) {
         _this.admins = admins;
         return _this;
     }
+    ITDepartment.prototype.describe = function () {
+        console.log('IT Department - ID: ' + this.id);
+    };
     return ITDepartment;
 }(Department));
 var teamTech = new ITDepartment('t01', ['Max']);
@@ -105,6 +103,9 @@ var IADepartment = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    IADepartment.prototype.describe = function () {
+        console.log('IADepartment - ID: ' + this.id);
+    };
     IADepartment.prototype.addReport = function (text) {
         this.reports.push(text);
         this.lastReport = text;
@@ -125,6 +126,7 @@ var IADepartment = /** @class */ (function (_super) {
 var iATeam = new IADepartment('ia01', []);
 iATeam.mostRecentReport = 'Powell';
 console.log("mostRecentReport ", iATeam.mostRecentReport);
+iATeam.describe();
 // adding reports
 iATeam.addReport('SharePoint');
 iATeam.addEmployee('Pia');
