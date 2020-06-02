@@ -71,17 +71,35 @@ var ITDepartment = /** @class */ (function (_super) {
     return ITDepartment;
 }(Department));
 var teamTech = new ITDepartment('t01', ['Max']);
-console.log("teamTechnik", teamTech);
+console.log('teamTechnik', teamTech);
 // 2. Example
 var IADepartment = /** @class */ (function (_super) {
     __extends(IADepartment, _super);
     function IADepartment(id, reports) {
         var _this = _super.call(this, id, 'IA') || this;
         _this.reports = reports;
+        _this.lastReport = reports[0];
         return _this;
     }
+    Object.defineProperty(IADepartment.prototype, "mostRecentReport", {
+        get: function () {
+            if (this.lastReport) {
+                return this.lastReport;
+            }
+            throw new Error('No report found.');
+        },
+        set: function (value) {
+            if (!value) {
+                throw new Error('Please pass in a valid value.');
+            }
+            this.addReport(value);
+        },
+        enumerable: false,
+        configurable: true
+    });
     IADepartment.prototype.addReport = function (text) {
         this.reports.push(text);
+        this.lastReport = text;
     };
     IADepartment.prototype.getReports = function () {
         console.log(this.reports);
@@ -96,9 +114,27 @@ var IADepartment = /** @class */ (function (_super) {
     return IADepartment;
 }(Department));
 // creating a new IADepartment
-var iATeam = new IADepartment('ia01', ['Coyo21']);
-// adding reports 
+var iATeam = new IADepartment('ia01', []);
+iATeam.mostRecentReport = 'Powell';
+console.log("mostRecentReport ", iATeam.mostRecentReport);
+// adding reports
 iATeam.addReport('SharePoint');
 iATeam.addEmployee('Pia');
 iATeam.printEmployeeeInformation();
 console.log('iATeam', iATeam);
+/* Getters & Setters */
+var user = {
+    /* data properties */
+    name: 'John',
+    surname: 'Smith',
+    /* accessor properties */
+    get fullName() {
+        return this.name + " " + this.surname;
+    },
+    set fullName(value) {
+        var _a;
+        _a = value.split(' '), this.name = _a[0], this.surname = _a[1];
+    }
+};
+// set fullName is executed with the given value.
+user.fullName = 'Alice Cooper';

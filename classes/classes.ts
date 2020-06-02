@@ -1,33 +1,32 @@
 /* Declaring class */
 
 class Department {
-    // private id: string;
-    // private name: string;
-    /* Adding 'private' modifier */
-    protected employees: string[] = [];
-    //constructor method
-    constructor(private readonly id: string, public name: string) {
-        // this.id = id;
-        // this.name = n;
-    }
-    /* adding method */
-    /* using 'this' keyword */
-    describe(this: Department) {
-        console.log('Department: ' + this.id + ', ' + this.name)
-    }
+	// private id: string;
+	// private name: string;
+	/* Adding 'private' modifier */
+	protected employees: string[] = [];
+	//constructor method
+	constructor(private readonly id: string, public name: string) {
+		// this.id = id;
+		// this.name = n;
+	}
+	/* adding method */
+	/* using 'this' keyword */
+	describe(this: Department) {
+		console.log('Department: ' + this.id + ', ' + this.name);
+	}
 
-    addEmployee(employee: string) {
-    this.employees.push(employee);
-    }
+	addEmployee(employee: string) {
+		this.employees.push(employee);
+	}
 
-    printEmployeeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-    }
+	printEmployeeeInformation() {
+		console.log(this.employees.length);
+		console.log(this.employees);
+	}
 }
 
-const accounting = new Department('d1','Accounting');
-
+const accounting = new Department('d1', 'Accounting');
 
 accounting.addEmployee('Max');
 accounting.addEmployee('Radek');
@@ -52,46 +51,69 @@ console.log(accounting);
 /* Inheritance */
 // 1. Example
 class ITDepartment extends Department {
-    admins: string[];
-    /* constructor will help us constructing parts 
+	admins: string[];
+	/* constructor will help us constructing parts 
     of a new class unique to it, not inherited from the bas class */
-    constructor(id: string, admins: string[]) {
-        /* we pass id from constructor from argument passed to class 
+	constructor(id: string, admins: string[]) {
+		/* we pass id from constructor from argument passed to class 
             the second argument 'IT' is already declared in the Department
         */
-        super(id, 'IT');
-        this.admins = admins;
-    }
+		super(id, 'IT');
+		this.admins = admins;
+	}
 }
 
-const teamTech = new ITDepartment('t01', ['Max']);
-console.log("teamTechnik", teamTech);
+const teamTech = new ITDepartment('t01', [ 'Max' ]);
+console.log('teamTechnik', teamTech);
 
 // 2. Example
 class IADepartment extends Department {
-    constructor(id: string, private reports: string[]) {
-        super(id, 'IA');
-    }
 
-    addReport(text: string) {
-        this.reports.push(text);
-    }
+	private lastReport: string;
 
-    getReports() {
-        console.log(this.reports);
-    }
+	get mostRecentReport() {
+		if (this.lastReport) {
+			return this.lastReport;
+		}
+		throw new Error('No report found.');
+	}
 
-    /* overwriting properties (methods) from base class */
-    addEmployee(name: string) {
-        if (name=== 'Max' || name === 'Radek') {
-            return;
-        }
-        this.employees.push(name);
-    }
+	set mostRecentReport(value: string) {
+		if (!value) {
+			throw new Error('Please pass in a valid value.');
+		}
+		this.addReport(value);
+	}
+
+	constructor(id: string, private reports: string[]) {
+		super(id, 'IA');
+		this.lastReport = reports[0];
+	}
+
+	addReport(text: string) {
+		this.reports.push(text);
+		this.lastReport = text;
+	}
+
+	getReports() {
+		console.log(this.reports);
+	}
+
+	/* overwriting properties (methods) from base class */
+	addEmployee(name: string) {
+		if (name === 'Max' || name === 'Radek') {
+			return;
+		}
+		this.employees.push(name);
+	}
 }
 // creating a new IADepartment
-const iATeam = new IADepartment('ia01', ['Coyo21']);
-// adding reports 
+const iATeam = new IADepartment('ia01', []);
+
+iATeam.mostRecentReport = 'Powell'
+console.log("mostRecentReport ", iATeam.mostRecentReport);
+
+// adding reports
 iATeam.addReport('SharePoint');
 
 iATeam.addEmployee('Pia');
@@ -99,3 +121,22 @@ iATeam.printEmployeeeInformation();
 
 console.log('iATeam', iATeam);
 
+/* Getters & Setters */
+
+let user = {
+	/* data properties */
+	name: 'John',
+	surname: 'Smith',
+
+	/* accessor properties */
+	get fullName() {
+		return `${this.name} ${this.surname}`;
+	},
+
+	set fullName(value) {
+		[ this.name, this.surname ] = value.split(' ');
+	}
+};
+
+// set fullName is executed with the given value.
+user.fullName = 'Alice Cooper';
