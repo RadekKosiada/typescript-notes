@@ -25,3 +25,5 @@
 * accessor property (unlike data property);
 * they are essentially functions that execute on getting and setting a value, but look like regular properties to an external code. i.e. check the classes.ts code;
 * has to return something;
+
+###### Static methods & property

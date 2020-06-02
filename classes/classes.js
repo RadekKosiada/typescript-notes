@@ -16,15 +16,20 @@ var __extends = (this && this.__extends) || (function () {
 var Department = /** @class */ (function () {
     //constructor method
     function Department(id, name) {
+        // this.id = id;
+        // this.name = n;
         this.id = id;
         this.name = name;
         // private id: string;
         // private name: string;
         /* Adding 'private' modifier */
         this.employees = [];
-        // this.id = id;
-        // this.name = n;
+        //accessing the static property
+        console.log(Department.fiscalYear);
     }
+    Department.createEmployee = function (name) {
+        return { name: name };
+    };
     /* adding method */
     /* using 'this' keyword */
     Department.prototype.describe = function () {
@@ -37,8 +42,11 @@ var Department = /** @class */ (function () {
         console.log(this.employees.length);
         console.log(this.employees);
     };
+    Department.fiscalYear = 2020;
     return Department;
 }());
+var employee1 = Department.createEmployee('Radek');
+console.log('employee1', employee1, Department.fiscalYear);
 var accounting = new Department('d1', 'Accounting');
 accounting.addEmployee('Max');
 accounting.addEmployee('Radek');

@@ -9,7 +9,16 @@ class Department {
 	constructor(private readonly id: string, public name: string) {
 		// this.id = id;
 		// this.name = n;
+
+		//accessing the static property
+		console.log(Department.fiscalYear);
 	}
+
+	static fiscalYear = 2020;
+	static createEmployee(name: string) {
+		return {name: name };
+	}
+
 	/* adding method */
 	/* using 'this' keyword */
 	describe(this: Department) {
@@ -25,6 +34,9 @@ class Department {
 		console.log(this.employees);
 	}
 }
+
+const employee1 = Department.createEmployee('Radek');
+console.log('employee1', employee1, Department.fiscalYear);
 
 const accounting = new Department('d1', 'Accounting');
 
