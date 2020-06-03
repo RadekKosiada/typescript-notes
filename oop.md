@@ -9,7 +9,7 @@
 * classes make creation of multiple, similar objects much easier;
 
 ##### Abstract classes
-* Abstract classes are base classes from which other classes may be derived. They may not be instantiated directly.
+* Abstract classes are base classes from which other classes may be derived. They may NOT be instantiated directly, but have to be extended.
 
 ###### Modifiers
 * 'public' default one;
