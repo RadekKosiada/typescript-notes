@@ -85,6 +85,8 @@ class IADepartment extends Department {
 
 	private lastReport: string;
 
+	private static instance : IADepartment;
+
 	get mostRecentReport() {
 		if (this.lastReport) {
 			return this.lastReport;
@@ -99,9 +101,17 @@ class IADepartment extends Department {
 		this.addReport(value);
 	}
 
-	constructor(id: string, private reports: string[]) {
+	private constructor(id: string, private reports: string[]) {
 		super(id, 'IA');
 		this.lastReport = reports[0];
+	}
+
+	static getInstance() {
+		if (IADepartment.instance){
+			return this.instance;
+		}
+		this.instance = new IADepartment('ia01', []);
+		return this.instance;
 	}
 
 	describe() {
@@ -126,7 +136,12 @@ class IADepartment extends Department {
 	}
 }
 // creating a new IADepartment
-const iATeam = new IADepartment('ia01', []);
+// const iATeam = new IADepartment('ia01', []);
+const iATeam = IADepartment.getInstance();
+// it will always be the same department;
+const iATeam2 = IADepartment.getInstance();
+
+console.log("iATeam", iATeam===iATeam2);
 
 iATeam.mostRecentReport = 'Powell'
 console.log("mostRecentReport ", iATeam.mostRecentReport);

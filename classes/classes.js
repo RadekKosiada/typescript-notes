@@ -103,6 +103,13 @@ var IADepartment = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    IADepartment.getInstance = function () {
+        if (IADepartment.instance) {
+            return this.instance;
+        }
+        this.instance = new IADepartment('ia01', []);
+        return this.instance;
+    };
     IADepartment.prototype.describe = function () {
         console.log('IADepartment - ID: ' + this.id);
     };
@@ -123,7 +130,11 @@ var IADepartment = /** @class */ (function (_super) {
     return IADepartment;
 }(Department));
 // creating a new IADepartment
-var iATeam = new IADepartment('ia01', []);
+// const iATeam = new IADepartment('ia01', []);
+var iATeam = IADepartment.getInstance();
+// it will always be the same department;
+var iATeam2 = IADepartment.getInstance();
+console.log("iATeam", iATeam === iATeam2);
 iATeam.mostRecentReport = 'Powell';
 console.log("mostRecentReport ", iATeam.mostRecentReport);
 iATeam.describe();

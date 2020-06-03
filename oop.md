@@ -30,3 +30,7 @@
 * has to return something;
 
 ###### Static methods & property
+
+###### Singleton
+* guarantees that we always have only(!) one instance of a certain class;
+* requires setting 'constructor' to 'private' and using static methods on the class;
