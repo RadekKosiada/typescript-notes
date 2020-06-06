@@ -12,3 +12,4 @@ var Person = /** @class */ (function () {
 var user1;
 user1 = new Person('Radek');
 user1.greet('Witaj');
+var add;

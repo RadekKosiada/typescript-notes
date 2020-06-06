@@ -25,3 +25,11 @@ let user1: Greetable;
 user1 = new Person('Radek')
 
 user1.greet('Witaj');
+
+/** Interface to define function */
+
+interface AddFn {
+    (a: number, b: number): number;
+}
+
+let add: AddFn;
