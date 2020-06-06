@@ -34,3 +34,8 @@
 ###### Singleton
 * guarantees that we always have only(!) one instance of a certain class;
 * requires setting 'constructor' to 'private' and using static methods on the class;
+
+#### Interface
+* describes the structure of an object;
+* 'interface' keyword is only in Typescript;
+* used as a custom type;
