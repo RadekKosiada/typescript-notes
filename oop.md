@@ -39,3 +39,8 @@
 * describes the structure of an object;
 * 'interface' keyword is only in Typescript;
 * used as a custom type;
+* sometimes could be exchanged with a custom type; there are some differences:
+    - 'I' could be described only to define structure of an object;
+    - 'I' makes clearer that we mean to describe structure of an object;
+    - 'I' can be implemented within a class;
+* can be implemented in a class together with other Interfaces (unlike Inheritance; class can inherit from only one class);
