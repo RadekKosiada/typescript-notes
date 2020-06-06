@@ -2,14 +2,18 @@
 /* creating an interface */
 var Person = /** @class */ (function () {
     function Person(n) {
-        this.name = n;
+        if (n) {
+            this.name = n;
+        }
     }
     Person.prototype.greet = function (phrase) {
-        console.log(phrase + ' ' + this.name);
+        if (this.name) {
+            console.log(phrase + ' ' + this.name);
+        }
     };
     return Person;
 }());
 var user1;
-user1 = new Person('Radek');
+user1 = new Person();
 user1.greet('Witaj');
 var add;

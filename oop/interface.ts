@@ -1,7 +1,10 @@
 /* creating an interface */
 
 interface Named {
-    readonly name: string;
+    readonly name?: string;
+    /** add optional property and optional method */
+    outputName?: string;
+    myMethod?(): void;
 }
 interface Greetable extends Named {
 /* not an actual method but a structure */
@@ -9,20 +12,24 @@ interface Greetable extends Named {
 }
 
 class Person implements Greetable {
-    name: string;
+    name?: string;
     age: number;
-    constructor(n: string) {
-        this.name = n;
+    constructor(n?: string) {
+        if(n) {
+            this.name = n;
+        }
     }
 
     greet(phrase: string) {
-        console.log(phrase + ' ' + this.name);
+        if(this.name) {
+            console.log(phrase + ' ' + this.name);
+        }
     }
 }
 
 let user1: Greetable;
 
-user1 = new Person('Radek')
+user1 = new Person()
 
 user1.greet('Witaj');
 

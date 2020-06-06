@@ -48,4 +48,5 @@
 * Interface enforces certain functionalities/methods to be added in a class;
 * properties in the 'I' can be only *readyonly*; 
 * one 'I' can *extend/inerhit* from a different one;
-* interface can also define funcions;
+* 'I' can also define funcions;
+* 'I' can have optional parameters and properties;
