@@ -1,4 +1,5 @@
 "use strict";
+/* creating an interface */
 var Person = /** @class */ (function () {
     function Person(n) {
         this.name = n;

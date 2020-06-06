@@ -1,6 +1,9 @@
 /* creating an interface */
-interface Greetable {
+
+interface Named {
     readonly name: string;
+}
+interface Greetable extends Named {
 /* not an actual method but a structure */
     greet(phrase: string): void;
 }
