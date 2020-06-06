@@ -44,6 +44,7 @@
     - 'I' makes clearer that we mean to describe structure of an object;
     - 'I' can be implemented within a class;
 * can be implemented in a class together with other Interfaces (unlike Inheritance; class can inherit from only one class);
-
 * especially helpful, when we have a set of functionalities;
 * Interface enforces certain functionalities/methods to be added in a class;
+* properties in the 'I' can be only *readyonly*; 
+

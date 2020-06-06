@@ -1,6 +1,6 @@
 /* creating an interface */
 interface Greetable {
-    name: string;
+    readonly name: string;
 /* not an actual method but a structure */
     greet(phrase: string): void;
 }
