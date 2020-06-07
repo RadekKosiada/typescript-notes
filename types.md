@@ -55,3 +55,6 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
     - combine multiple types into one;
     - allow to add existing types to get a single type that has all features we need;
     - allow to use **type guards**;
+        + check if a property exists before we use it:
+        + by using JS keyword 'in' for objects;
+        + by using JS keyword 'instanceof' for class;
