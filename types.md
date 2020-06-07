@@ -54,4 +54,4 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 + **intersection types**
     - combine multiple types into one;
     - allow to add existing types to get a single type that has all features we need;
-
+    - allow to use **type guards**;
