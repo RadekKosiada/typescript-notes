@@ -29,6 +29,12 @@ type Universal = Combinable & Numeric;
 
 // 1. Example
 
+/** Introducing function overloads */
+function addStuff(a: number, b: number): number;
+function addStuff(a: string, b:string): string;
+function addStuff(a: string, b: number): string;
+function addStuff(a: number, b: string): string;
+
 function addStuff(a: Combinable, b: Combinable) {
     // this if condition is type guard
     if (typeof a === 'string' || typeof b === 'string') {

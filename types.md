@@ -88,3 +88,7 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
     ```const userInput = document.getElementById('user-description')!;
     ```
     + to say the element will not be 'null' nur nor 'undefined';
+
++ **Function overloads**
+    + allows strictly define the outcome of the function with complex logic or when parameters are intersection types;
+    + to be used when TS cannot assume the type of outcome on its own;

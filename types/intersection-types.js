@@ -6,8 +6,6 @@ var e1 = {
     privileges: ['super admin'],
     startDate: new Date(),
 };
-/** Type Guards */
-// 1. Example
 function addStuff(a, b) {
     // this if condition is type guard
     if (typeof a === 'string' || typeof b === 'string') {
