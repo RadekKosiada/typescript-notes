@@ -71,3 +71,11 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
     + checks what properties are available;
     + to be used with interfaces, objects, union types;
 
++ **Type casting**
+    + additional info on type i.e. when the variable is a certain HTML element;
+
++ **'!'**
+    + to be added behind defining the HTML element:
+    ````const userInput = document.getElementById('user-description')!;
+    ````
+    + to say the element will not be 'null' nur nor 'undefined';
