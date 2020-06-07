@@ -10,7 +10,10 @@ Unlike JS that uses 'dynamic types';
 
 + **boolean** - only true & false; no 'truthy' or 'falsy' value;
 
-+ **objects**  - any JS object; can be defined as type 'object' just by assigning object to a const; but more specific objects can be possible;
++ **objects**  
+    - any JS object; can be defined as type 'object' just by assigning object to a const; but more specific objects can be possible;
+    - allow using **discriminated unions**;
+
 
 + **array** - any JS array; type can be 
     - flexible;
@@ -55,6 +58,16 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
     - combine multiple types into one;
     - allow to add existing types to get a single type that has all features we need;
     - allow to use **type guards**;
-        + check if a property exists before we use it:
-        + by using JS keyword 'in' for objects;
-        + by using JS keyword 'instanceof' for class;
+
+**SUPPORTING FEATURES**
+
++ **Type guards**
+    + check if a property exists before we use it:
+    + by using JS keyword 'in' for objects;
+    + by using JS keyword 'instanceof' for class;
+
++ **Discriminated unions**
+    + patterns available when working with object types;
+    + checks what properties are available;
+    + to be used with interfaces, objects, union types;
+
