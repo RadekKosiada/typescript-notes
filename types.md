@@ -59,6 +59,15 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
     - allow to add existing types to get a single type that has all features we need;
     - allow to use **type guards**;
 
++ **Index types**
+    - to be used if
+        - we don't know the property name
+        - we don't know the propery count
+        - we know there will be a property name and it will be a string
+        - we also know there will be a value and it will also be a string;
+    - we can have fixed/defined properties but their types have to be of the same type as predefined ones;
+
+
 **SUPPORTING FEATURES**
 
 + **Type guards**
