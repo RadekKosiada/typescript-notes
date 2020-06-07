@@ -92,3 +92,7 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 + **Function overloads**
     + allows strictly define the outcome of the function with complex logic or when parameters are intersection types;
     + to be used when TS cannot assume the type of outcome on its own;
+
++ **Optional chaining**
+    + allows optionally chaining the data from an object;
+
