@@ -71,7 +71,7 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 **SUPPORTING FEATURES**
 
 + **Type guards**
-    + check if a property exists before we use it:
+    + check if a property exists in an object or class before we use it:
     + by using JS keyword 'in' for objects;
     + by using JS keyword 'instanceof' for class;
 
@@ -98,7 +98,7 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 
 + **Nullish Coalescing**
     + allows having a default value in case the actual one is 'null' or 'undefined';
-    
+
 
 
 
