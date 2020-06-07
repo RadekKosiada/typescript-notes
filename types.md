@@ -96,3 +96,9 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 + **Optional chaining**
     + allows optionally chaining the data from an object;
 
++ **Nullish Coalescing**
+    + allows having a default value in case the actual one is 'null' or 'undefined';
+    
+
+
+
