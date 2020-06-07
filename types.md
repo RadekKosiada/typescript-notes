@@ -76,7 +76,6 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 
 + **'!'**
     + to be added behind defining the HTML element:
-    ```
-    const userInput = document.getElementById('user-description')!;
+    ```const userInput = document.getElementById('user-description')!;
     ```
     + to say the element will not be 'null' nur nor 'undefined';
