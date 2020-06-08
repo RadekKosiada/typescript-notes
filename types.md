@@ -67,4 +67,7 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
         - we also know there will be a value and it will also be a string;
     - we can have fixed/defined properties but their types have to be of the same type as predefined ones;
 
++ **Generic type**
+    + is connected with some other type and is flexible what type it is;
+    
 
