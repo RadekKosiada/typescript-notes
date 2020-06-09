@@ -17,3 +17,20 @@ const promise: Promise<string> = new Promise((resolve, reject) => {
     }, 2000);
 });
 
+/** Building a custom generic type */
+
+/** By adding abstract letters T, U we say TS the outcome of the function will be intersection of T & U 
+ *  in the same time we say T and U will be often be of a different type
+ *  T & S are set dynamically
+*/
+function merge<T, U, >(objA: T, objB: U) {
+    return Object.assign(objA, objB); 
+}
+
+const mergedObj = merge({name: 'Radek'}, {job: 'Software Engineer'});
+/** we can specify our T & U */
+const mergedObj2 = merge<{name: string, hobbies: string[]}, {location: string}>({name: 'Dominik', hobbies: ['Building Furnittures']}, {location: 'Berlin'});
+
+
+
+console.log(mergedObj.job);
