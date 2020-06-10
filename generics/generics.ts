@@ -65,7 +65,7 @@ extractAndConvert({name: 'Radek'}, 'name');
 /** Creating a generic class
  * allows to store string and numbers
  */
-class DataStorage<T> {
+class DataStorage<T extends string | number | boolean > {
     private data: T[] = [];
 
     addItem(item: T) {
@@ -73,7 +73,7 @@ class DataStorage<T> {
     }
 
     removeItem(item: T)  {
-        
+
         this.data.splice(this.data.indexOf(item), 1);
     }
 
