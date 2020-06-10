@@ -1,3 +1,5 @@
+import { threadId } from "worker_threads";
+
 /** 3 ways of defining a string */
 const arr = ['string1', 'string2'];
 
@@ -59,3 +61,38 @@ function extractAndConvert<T extends object, U extends keyof T>(obj: T, key: U) 
 }
 
 extractAndConvert({name: 'Radek'}, 'name');
+
+/** Creating a generic class
+ * allows to store string and numbers
+ */
+class DataStorage<T> {
+    private data: T[] = [];
+
+    addItem(item: T) {
+        this.data.push(item);
+    }
+
+    removeItem(item: T)  {
+        
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+
+    getItems() {
+        return [... this.data];
+    }
+}
+
+/** storing string */
+const textStorage = new DataStorage<string>();
+
+textStorage.addItem('Max');
+textStorage.addItem('Radek');
+textStorage.removeItem('Max');
+console.log(textStorage.getItems());
+
+/** storing numbers */
+const numberStorage = new DataStorage<number>();
+numberStorage.addItem(1);
+numberStorage.addItem(34);
+numberStorage.removeItem(1);
+console.log(numberStorage.getItems());

@@ -69,7 +69,11 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
 
 + **Generic type**
     + is connected with some other type and is flexible what type it is;
-    + allow/require **Constraints** 
-        + added by keyword 'extands' regarding what types generic can be based on;
-        + interface can be a Constraint;
-        + allows using 'keyof'; 
+    + **Generic functions**
+        + allow/require **Constraints** 
+            + added by keyword 'extands' regarding what types generic can be based on;
+            + interface can be a Constraint;
+            + allows using 'keyof'; 
+    
+    + **Generic classes**
+        + 
