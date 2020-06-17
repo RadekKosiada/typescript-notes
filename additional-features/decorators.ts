@@ -1,12 +1,14 @@
 /** Creating a decorator
  * uppercase not a must, but a convention
  */
-function Logger(constructor: Function) {
-    console.log('Logging...');
-    console.log(constructor);
-}
+function Logger(logString: string) {
+    return function(constructor: Function) {
+        console.log(logString);
+        console.log(constructor);
+    };  
+};
 
-@Logger
+@Logger('LOGGING - PERSON')
 class Person1 {
     name = 'Max';
 
@@ -18,4 +20,5 @@ class Person1 {
 const pers = new Person1();
 
 console.log(pers);
+
 

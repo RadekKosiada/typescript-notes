@@ -8,17 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 /** Creating a decorator
  * uppercase not a must, but a convention
  */
-function Logger(constructor) {
-    console.log('Logging...');
-    console.log(constructor);
+function Logger(logString) {
+    return function (constructor) {
+        console.log(logString);
+        console.log(constructor);
+    };
 }
+;
 var Person1 = /** @class */ (function () {
     function Person1() {
         this.name = 'Max';
         console.log('Creating person object...');
     }
     Person1 = __decorate([
-        Logger
+        Logger('LOGGING - PERSON')
     ], Person1);
     return Person1;
 }());
