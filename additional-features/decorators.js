@@ -25,13 +25,13 @@ function WithTemplate(template, hookId) {
         }
     };
 }
-// @Logger('LOGGING - PERSON')
 var Person1 = /** @class */ (function () {
     function Person1() {
         this.name = 'Max';
         console.log('Creating person object...');
     }
     Person1 = __decorate([
+        Logger('LOGGING - PERSON'),
         WithTemplate('<h1>My Person Object</h1>', 'app')
     ], Person1);
     return Person1;
