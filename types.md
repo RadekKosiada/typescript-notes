@@ -76,4 +76,9 @@ Anything is assignable to unknown, but unknown isn’t assignable to anything bu
             + allows using 'keyof'; 
     
     + **Generic classes**
-        + 
+    
+    + **Difference: generic types vs. Union types**
+        + Generics: if you want a lock in a certain type;
+        + Union: when you want a flexble type; different with every method/function call;
+
+    
