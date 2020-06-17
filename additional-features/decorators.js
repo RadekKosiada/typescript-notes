@@ -15,13 +15,22 @@ function Logger(logString) {
     };
 }
 ;
+function WithTemplate(template, hookId) {
+    return function (_) {
+        var hookEl = document.getElementById(hookId);
+        if (hookEl) {
+            hookEl.innerHTML = template;
+        }
+    };
+}
+// @Logger('LOGGING - PERSON')
 var Person1 = /** @class */ (function () {
     function Person1() {
         this.name = 'Max';
         console.log('Creating person object...');
     }
     Person1 = __decorate([
-        Logger('LOGGING - PERSON')
+        WithTemplate('<h1>My Person Object</h1>', 'app')
     ], Person1);
     return Person1;
 }());
