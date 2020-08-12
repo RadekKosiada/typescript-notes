@@ -9,19 +9,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
  * uppercase not a must, but a convention
  */
 function Logger(logString) {
+    //since it's returns a function, it's a decorator's factory
     return function (constructor) {
         console.log(logString);
         console.log(constructor);
     };
 }
 ;
+/** Creating a decorator's factory */
 function WithTemplate(template, hookId) {
     return function (constructor) {
         var hookEl = document.getElementById(hookId);
+        console.log(hookId);
         var p = new constructor();
         if (hookEl) {
+            console.log('hookEl', hookEl);
             hookEl.innerHTML = template;
-            hookEl.querySelector('h1').textContent = name;
+            hookEl.querySelector('h1').textContent = p.name;
         }
     };
 }

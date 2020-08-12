@@ -2,19 +2,23 @@
  * uppercase not a must, but a convention
  */
 function Logger(logString: string) {
+    //since it's returns a function, it's a decorator's factory
     return function(constructor: Function) {
         console.log(logString);
         console.log(constructor);
     };  
 };
 
+/** Creating a decorator's factory */
 function WithTemplate(template: string, hookId: string) {
     return function(constructor: any) {
         const hookEl = document.getElementById(hookId);
+        console.log(hookId)
         const p = new constructor();
         if(hookEl) {
+            console.log('hookEl', hookEl);
             hookEl.innerHTML = template;
-            hookEl.querySelector('h1')!.textContent = name;
+            hookEl.querySelector('h1')!.textContent = p.name;
         }
     }
 }
@@ -32,7 +36,6 @@ class Person1 {
 const pers = new Person1();
 
 console.log(pers);
-
 
 function Log(target: any, propertyName: string | Symbol) {
     console.log('Property decorator!');
