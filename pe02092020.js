@@ -1,3 +1,9 @@
+/* Computed keys */
+var loginCounts = {
+    Amir: 5,
+    Betty: 7
+};
+loginCounts.Betty;
 /*
 Write a generic function applyFunction that takes two arguments:
 
